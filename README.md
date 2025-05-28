@@ -2,11 +2,7 @@
 
 A modified version of the Phaser Editor v4 project template that shows how to easily add audio to your Phaser 3 games, via direct code and script nodes!
 
-For a detailed walkthrough, checkout my videos on YouTube here:
-
-[<img src="https://i.ytimg.com/vi/LyK_h_zm1_s/hqdefault.jpg">](https://youtu.be/LyK_h_zm1_s "Phaser Editor v4 Tutorial: Add a Fullscreen Button to Your Game in Minutes!")
-
-[<img src="https://i.ytimg.com/vi/LyK_h_zm1_s/hqdefault.jpg">](https://youtu.be/LyK_h_zm1_s "Phaser Editor v4 Tutorial: Add a Fullscreen Button to Your Game in Minutes!")
+For a detailed walkthrough, checkout my videos on YouTube here: Coming soon...
 
 ## Demo
 
