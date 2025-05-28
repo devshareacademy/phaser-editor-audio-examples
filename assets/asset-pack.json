@@ -12,9 +12,23 @@
                 "key": "background"
             },
             {
+                "url": [
+                    "assets/audio/xDeviruchi/battle.mp3"
+                ],
+                "type": "audio",
+                "key": "battle"
+            },
+            {
                 "url": "assets/images/carnodusk.png",
                 "type": "image",
                 "key": "carnodusk"
+            },
+            {
+                "url": [
+                    "assets/audio/leohpaz/claw.mp3"
+                ],
+                "type": "audio",
+                "key": "slash"
             },
             {
                 "url": "assets/images/forest-background.png",
@@ -25,6 +39,13 @@
                 "url": "assets/images/glass_panel.png",
                 "type": "image",
                 "key": "glass_panel"
+            },
+            {
+                "url": [
+                    "assets/audio/leohpaz/ice.mp3"
+                ],
+                "type": "audio",
+                "key": "ice"
             },
             {
                 "url": "assets/images/ice-attack.png",
@@ -73,6 +94,13 @@
                 },
                 "type": "spritesheet",
                 "key": "slash"
+            },
+            {
+                "url": [
+                    "assets/audio/xDeviruchi/title.mp3"
+                ],
+                "type": "audio",
+                "key": "title"
             },
             {
                 "url": "assets/images/title_background.png",

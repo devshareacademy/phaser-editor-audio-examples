@@ -26,7 +26,9 @@ export default class CustomPlaySoundActionScript extends ScriptNode {
 
 	// Write your code here.
 	execute(...args) {
+		console.log(args);
 		const audioKeyFromArgs = this.getActionTargetObject(args);
+		console.log(audioKeyFromArgs);
 		const config = {};
 		const loopConfig = AudioLoopConfigComp.getComponent(this);
 		if (loopConfig) {

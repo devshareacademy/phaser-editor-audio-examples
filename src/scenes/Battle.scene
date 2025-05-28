@@ -71,7 +71,7 @@
             "scope": "CLASS",
             "texture": {
                 "key": "slash",
-                "frame": 2
+                "frame": 0
             },
             "x": 778,
             "y": 197,
@@ -83,28 +83,6 @@
             "tintBottomRight": "#000",
             "tintFill": true,
             "animationKey": "slash"
-        },
-        {
-            "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
-            "id": "74237bfc-6199-4f05-89ac-1644db573b10",
-            "label": "onAwakeScript",
-            "list": [
-                {
-                    "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
-                    "id": "2867da30-8668-4662-92fe-577b8ed2e77a",
-                    "unlock": [
-                        "fadeDirection",
-                        "color"
-                    ],
-                    "label": "fadeCameraActionScript_1",
-                    "fadeDirection": "FadeIn",
-                    "color": "#000000",
-                    "components": [
-                        "DurationConfigComp"
-                    ],
-                    "DurationConfigComp.duration": 500
-                }
-            ]
         },
         {
             "prefabId": "7ee88470-f945-4814-ac87-a7ba2314a942",
@@ -166,6 +144,53 @@
             "x": 986,
             "y": 37,
             "tintFill": false
+        },
+        {
+            "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+            "id": "74237bfc-6199-4f05-89ac-1644db573b10",
+            "label": "onAwakeScript",
+            "list": [
+                {
+                    "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
+                    "id": "2867da30-8668-4662-92fe-577b8ed2e77a",
+                    "unlock": [
+                        "fadeDirection",
+                        "color"
+                    ],
+                    "label": "fadeCameraActionScript_1",
+                    "fadeDirection": "FadeIn",
+                    "color": "#000000",
+                    "components": [
+                        "DurationConfigComp"
+                    ],
+                    "DurationConfigComp.duration": 500
+                }
+            ]
+        },
+        {
+            "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+            "id": "1014c401-5459-4836-8663-4676619df3cc",
+            "unlock": [
+                "eventName",
+                "eventEmitter"
+            ],
+            "label": "onEventScript",
+            "eventName": "custom-play-sound",
+            "eventEmitter": "scene.events",
+            "list": [
+                {
+                    "prefabId": "2a4ccc8a-f56a-40bd-9b11-278f7ddfe121",
+                    "id": "ba2431e0-935c-4193-a70c-e276e1ab0293",
+                    "label": "customPlaySoundActionScript",
+                    "components": [
+                        "ActionTargetComp",
+                        "AudioVolumeConfigComp",
+                        "AudioLoopConfigComp"
+                    ],
+                    "ActionTargetComp.target": "ARG_1",
+                    "AudioLoopConfigComp.loop": false
+                }
+            ]
         }
     ],
     "plainObjects": [],

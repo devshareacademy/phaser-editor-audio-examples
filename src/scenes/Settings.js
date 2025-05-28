@@ -130,12 +130,14 @@ export default class Settings extends Phaser.Scene {
 			this.soundOnText.updateIsSelected(false);
 			this.soundOffText.updateIsSelected(true);
 			// TODO: disable audio
+			this.sound.mute = true;
 			return;
 		}
 		if (option === 'on') {
 			this.soundOffText.updateIsSelected(false);
 			this.soundOnText.updateIsSelected(true);
 			// TODO: enable audio
+			this.sound.mute = false;
 			return;
 		}
 	}
@@ -146,6 +148,7 @@ export default class Settings extends Phaser.Scene {
 	handleVolumeSliderChange(value) {
 		console.log(value);
 		// TODO: update volume
+		this.sound.setVolume(value);
 	}
 
 	/* END-USER-CODE */

@@ -41,6 +41,11 @@
                             "label": "toggleTextureScript",
                             "mainTexture": "{\"key\":\"music_on\"}",
                             "altTexture": "{\"key\":\"music_off\"}"
+                        },
+                        {
+                            "prefabId": "570cd4b0-a8a2-4981-abb5-517bd9b273c5",
+                            "id": "29bdac9c-2517-4b5a-b18a-5038cc684e24",
+                            "label": "toggleMuteScript"
                         }
                     ]
                 }

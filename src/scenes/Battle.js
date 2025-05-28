@@ -3,11 +3,16 @@
 
 /* START OF COMPILED CODE */
 
+import BattleTextPrefab from "../prefabs/BattleTextPrefab.js";
+import AudioPrefab from "../prefabs/AudioPrefab.js";
 import OnAwakeScript from "../../phaserjs_editor_scripts_quick/core/OnAwakeScript.js";
 import FadeCameraActionScript from "../../phaserjs_editor_scripts_quick/camera/FadeCameraActionScript.js";
 import DurationConfigComp from "../../phaserjs_editor_scripts_quick/animations/DurationConfigComp.js";
-import BattleTextPrefab from "../prefabs/BattleTextPrefab.js";
-import AudioPrefab from "../prefabs/AudioPrefab.js";
+import OnEventScript from "../../phaserjs_editor_scripts_quick/core/OnEventScript.js";
+import CustomPlaySoundActionScript from "../scripts/CustomPlaySoundActionScript.js";
+import ActionTargetComp from "../../phaserjs_editor_scripts_base/ActionTargetComp.js";
+import AudioVolumeConfigComp from "../../phaserjs_editor_scripts_quick/audio/AudioVolumeConfigComp.js";
+import AudioLoopConfigComp from "../../phaserjs_editor_scripts_quick/audio/AudioLoopConfigComp.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -45,7 +50,7 @@ export default class Battle extends Phaser.Scene {
 		iceAttack.scaleY = 3;
 
 		// slashAttack
-		const slashAttack = this.add.sprite(778, 197, "slash", 2);
+		const slashAttack = this.add.sprite(778, 197, "slash", 0);
 		slashAttack.scaleX = 4;
 		slashAttack.scaleY = 4;
 		slashAttack.tintFill = true;
@@ -53,12 +58,6 @@ export default class Battle extends Phaser.Scene {
 		slashAttack.tintTopRight = 0;
 		slashAttack.tintBottomLeft = 0;
 		slashAttack.tintBottomRight = 0;
-
-		// onAwakeScript
-		const onAwakeScript = new OnAwakeScript(this);
-
-		// fadeCameraActionScript_1
-		const fadeCameraActionScript_1 = new FadeCameraActionScript(onAwakeScript);
 
 		// slashAttackTextPrefab
 		const slashAttackTextPrefab = new BattleTextPrefab(this, 250, 510);
@@ -77,13 +76,17 @@ export default class Battle extends Phaser.Scene {
 		this.add.existing(music_on);
 		music_on.tintFill = false;
 
-		// fadeCameraActionScript_1 (prefab fields)
-		fadeCameraActionScript_1.fadeDirection = "FadeIn";
-		fadeCameraActionScript_1.color = "#000000";
+		// onAwakeScript
+		const onAwakeScript = new OnAwakeScript(this);
 
-		// fadeCameraActionScript_1 (components)
-		const fadeCameraActionScript_1DurationConfigComp = new DurationConfigComp(fadeCameraActionScript_1);
-		fadeCameraActionScript_1DurationConfigComp.duration = 500;
+		// fadeCameraActionScript_1
+		const fadeCameraActionScript_1 = new FadeCameraActionScript(onAwakeScript);
+
+		// onEventScript
+		const onEventScript = new OnEventScript(this);
+
+		// customPlaySoundActionScript
+		const customPlaySoundActionScript = new CustomPlaySoundActionScript(onEventScript);
 
 		// slashAttackTextPrefab (prefab fields)
 		slashAttackTextPrefab.onClickCallback = this.handleAttackSelected.bind(this);;
@@ -92,6 +95,25 @@ export default class Battle extends Phaser.Scene {
 		// iceAttackTextPrefab (prefab fields)
 		iceAttackTextPrefab.onClickCallback = this.handleAttackSelected.bind(this);;
 		iceAttackTextPrefab.value = "ice";
+
+		// fadeCameraActionScript_1 (prefab fields)
+		fadeCameraActionScript_1.fadeDirection = "FadeIn";
+		fadeCameraActionScript_1.color = "#000000";
+
+		// fadeCameraActionScript_1 (components)
+		const fadeCameraActionScript_1DurationConfigComp = new DurationConfigComp(fadeCameraActionScript_1);
+		fadeCameraActionScript_1DurationConfigComp.duration = 500;
+
+		// onEventScript (prefab fields)
+		onEventScript.eventName = "custom-play-sound";
+		onEventScript.eventEmitter = "scene.events";
+
+		// customPlaySoundActionScript (components)
+		const customPlaySoundActionScriptActionTargetComp = new ActionTargetComp(customPlaySoundActionScript);
+		customPlaySoundActionScriptActionTargetComp.target = "ARG_1";
+		new AudioVolumeConfigComp(customPlaySoundActionScript);
+		const customPlaySoundActionScriptAudioLoopConfigComp = new AudioLoopConfigComp(customPlaySoundActionScript);
+		customPlaySoundActionScriptAudioLoopConfigComp.loop = false;
 
 		this.iceAttack = iceAttack;
 		this.slashAttack = slashAttack;
@@ -113,6 +135,12 @@ export default class Battle extends Phaser.Scene {
 		this.editorCreate();
 		this.iceAttack.setVisible(false);
 		this.slashAttack.setVisible(false);
+
+		this.sound.stopAll();
+		this.sound.play('battle', {
+			loop: true,
+			volume: 0.5,
+		});
 	}
 
 	/**
@@ -122,11 +150,13 @@ export default class Battle extends Phaser.Scene {
 		if (option === 'ice' && !this.iceAttack.anims.isPlaying) {
 			this.iceAttack.play('ice', true);
 			// TODO: play attack sfx
+			this.events.emit('custom-play-sound', 'ice');
 			return;
 		}
 		if (option === 'slash' && !this.slashAttack.anims.isPlaying) {
 			this.slashAttack.play('slash', true);
 			// TODO: play attack sfx
+			this.events.emit('custom-play-sound', 'slash');
 			return;
 		}
 	}

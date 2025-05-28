@@ -5,6 +5,7 @@
 
 import OnPointerDownScript from "../../phaserjs_editor_scripts_quick/core/OnPointerDownScript.js";
 import ToggleTextureScript from "../scripts/ToggleTextureScript.js";
+import ToggleMuteScript from "../scripts/ToggleMuteScript.js";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -25,6 +26,9 @@ export default class AudioPrefab extends Phaser.GameObjects.Image {
 
 		// toggleTextureScript
 		const toggleTextureScript = new ToggleTextureScript(onPointerDownScript);
+
+		// toggleMuteScript
+		new ToggleMuteScript(onPointerDownScript);
 
 		// toggleTextureScript (prefab fields)
 		toggleTextureScript.mainTexture = {"key":"music_on"};

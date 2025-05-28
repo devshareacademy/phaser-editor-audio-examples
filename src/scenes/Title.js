@@ -99,6 +99,14 @@ export default class Title extends Phaser.Scene {
 
 		this.editorCreate();
 		// TODO: start background music
+		const sound = this.sound.get('title');
+		if (sound) {
+			return;
+		}
+		this.sound.play('title', {
+			loop: true,
+			volume: 0.5,
+		});
 	}
 
 	/* END-USER-CODE */
