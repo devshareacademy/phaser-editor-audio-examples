@@ -4,11 +4,6 @@ A modified version of the Phaser Editor v4 project template that shows how to ea
 
 For a detailed walkthrough, checkout my videos on YouTube here: Coming soon...
 
-## Demo
-
-You can find a demo of the project here: <a href="https://scottwestover.dev/games/phaser-editor-full-screen-demo/index.html" target="_blank">Demo</a>.
-
-![Demo](/docs/example.gif?raw=true 'Demo')
 
 ## Configuration
 
