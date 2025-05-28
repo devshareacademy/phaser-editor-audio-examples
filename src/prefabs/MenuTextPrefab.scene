@@ -1,0 +1,151 @@
+{
+    "id": "d0f8dfed-f644-4e96-a9cb-6a1fa428b564",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "Text",
+            "id": "117328ed-d12d-4092-a569-055858298d33",
+            "label": "newGameText",
+            "displayName": "New Game Text",
+            "hitArea.shape": "RECTANGLE",
+            "hitArea.width": 164,
+            "hitArea.height": 30,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "New Game",
+            "fontFamily": "Kenney-Future-Narrow",
+            "fontSize": "30px",
+            "color": "#4D4A49",
+            "list": [
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "f9897d32-afec-4076-bf7e-8902b5be309f",
+                    "unlock": [
+                        "eventName"
+                    ],
+                    "label": "onPointerOverScript",
+                    "displayName": "On Point Over Script",
+                    "eventName": "Phaser.Input.Events.POINTER_OVER",
+                    "list": [
+                        {
+                            "prefabId": "abc52dda-ca85-4e23-ad3c-48081272a0d3",
+                            "id": "3212af66-baa0-4832-912f-cd9d91e68b4a",
+                            "unlock": [
+                                "scaleX"
+                            ],
+                            "label": "setScaleXActionScript",
+                            "displayName": "Increase Scale X",
+                            "scaleX": 1.25
+                        },
+                        {
+                            "prefabId": "80e97917-0335-47e1-aa0e-024f8dfde149",
+                            "id": "d04ae83b-a845-48d6-8a71-e6a94d0e3c62",
+                            "unlock": [
+                                "scaleY"
+                            ],
+                            "label": "setScaleYActionScript",
+                            "displayName": "Increase Scale Y",
+                            "scaleY": 1.25
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "7971fff3-cd9d-4c11-bc13-63480be55c81",
+                    "unlock": [
+                        "eventName"
+                    ],
+                    "label": "onPointerOutScript",
+                    "displayName": "On Pointer Out Script",
+                    "eventName": "Phaser.Input.Events.POINTER_OUT",
+                    "list": [
+                        {
+                            "prefabId": "80e97917-0335-47e1-aa0e-024f8dfde149",
+                            "id": "a11d6179-b1aa-4cb0-a779-a4408faf19a5",
+                            "unlock": [
+                                "scaleY"
+                            ],
+                            "label": "setScaleYActionScript_1",
+                            "displayName": "Reset Scale Y",
+                            "scaleY": 1
+                        },
+                        {
+                            "prefabId": "abc52dda-ca85-4e23-ad3c-48081272a0d3",
+                            "id": "c83156cc-b23b-4cb8-8aee-1429c51147a4",
+                            "unlock": [
+                                "scaleX"
+                            ],
+                            "label": "setScaleXActionScript_1",
+                            "displayName": "Reset Scale X",
+                            "scaleX": 1
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "0de0d682-6f15-4cb7-9917-ecefbbc82086",
+                    "unlock": [
+                        "once"
+                    ],
+                    "label": "onPointerDownScript",
+                    "displayName": "On Click Start Scene",
+                    "once": true,
+                    "list": [
+                        {
+                            "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
+                            "id": "141aac5c-8ed9-444a-b013-a76255884150",
+                            "unlock": [
+                                "fadeDirection",
+                                "color"
+                            ],
+                            "label": "fadeCameraActionScript",
+                            "fadeDirection": "FadeOut",
+                            "color": "#000000",
+                            "components": [
+                                "DurationConfigComp"
+                            ],
+                            "DurationConfigComp.duration": 500,
+                            "list": [
+                                {
+                                    "prefabId": "2d3f9249-6fcd-4c7d-bd2f-77fa616af7e8",
+                                    "id": "bb4c7d26-e59f-4ff1-9f20-002539ee12be",
+                                    "label": "startSceneActionScript",
+                                    "scope": "CLASS"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "sceneToTransitionsTo",
+            "label": "Scene to transition to on click",
+            "tooltip": "The Phaser Scene that will be started when this button is clicked.",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "scene-key"
+            }
+        }
+    ]
+}

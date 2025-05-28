@@ -1,0 +1,57 @@
+{
+    "id": "4fec7711-a833-4e26-ae49-782a633dd6ea",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "f1da0c58-66a1-40c2-8996-3ccfaa189be7",
+            "label": "music_on",
+            "texture": {
+                "key": "music_on"
+            },
+            "scaleX": 1.5,
+            "scaleY": 1.5,
+            "tintTopLeft": "#4D4A49",
+            "tintTopRight": "#4D4A49",
+            "tintBottomLeft": "#4D4A49",
+            "tintBottomRight": "#4D4A49",
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "bbb77647-1ea5-4141-b100-f23d88ee437c",
+                    "label": "onPointerDownScript",
+                    "list": [
+                        {
+                            "prefabId": "f4b83be8-817d-480f-9862-1c73be04f8b1",
+                            "id": "24d03141-1819-47c0-8396-2868bc2d7b6c",
+                            "unlock": [
+                                "mainTexture",
+                                "altTexture"
+                            ],
+                            "label": "toggleTextureScript",
+                            "mainTexture": "{\"key\":\"music_on\"}",
+                            "altTexture": "{\"key\":\"music_off\"}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

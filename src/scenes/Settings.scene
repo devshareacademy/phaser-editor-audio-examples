@@ -1,0 +1,197 @@
+{
+    "id": "fe02c6d4-a3e1-4fae-9e7a-ce6ce1e9e174",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Settings",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "NineSlice",
+            "id": "1245b47a-dcfe-4fe5-bdad-666b16b9f254",
+            "label": "menuBackground",
+            "displayName": "Menu Background",
+            "texture": {
+                "key": "glass_panel"
+            },
+            "x": 200,
+            "y": 20,
+            "originX": 0,
+            "originY": 0,
+            "leftWidth": 32,
+            "rightWidth": 32,
+            "topHeight": 32,
+            "bottomHeight": 32,
+            "width": 624,
+            "height": 432
+        },
+        {
+            "prefabId": "520f31c8-5ee1-4e64-aaaf-88a21d0e985c",
+            "id": "ccc52245-51a8-4414-b713-7f779d7d2d33",
+            "unlock": [
+                "x",
+                "y",
+                "fontSize"
+            ],
+            "label": "optionsText",
+            "displayName": "Options Title Text",
+            "x": 512,
+            "y": 50,
+            "fontSize": "40px"
+        },
+        {
+            "prefabId": "520f31c8-5ee1-4e64-aaaf-88a21d0e985c",
+            "id": "23b8dad4-1112-45cf-bdbd-a6c77f37ec1a",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "originX",
+                "originY"
+            ],
+            "label": "soundText",
+            "displayName": "Sound Text",
+            "x": 240,
+            "y": 120,
+            "originX": 0,
+            "originY": 0.5,
+            "text": "Sound"
+        },
+        {
+            "prefabId": "520f31c8-5ee1-4e64-aaaf-88a21d0e985c",
+            "id": "a5e26df6-a787-4b72-b859-7a3410155609",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "originX",
+                "originY"
+            ],
+            "label": "volumeText",
+            "displayName": "Volume Text",
+            "x": 240,
+            "y": 200,
+            "originX": 0,
+            "originY": 0.5,
+            "text": "Volume"
+        },
+        {
+            "prefabId": "eea93eec-efbc-4970-be48-96e0532814a9",
+            "id": "d9ae5eb8-4510-4f52-8127-2aadcacc037a",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "originX",
+                "originY",
+                "isSelected",
+                "onClickCallback",
+                "value"
+            ],
+            "label": "soundOnText",
+            "displayName": "Sound On Text",
+            "scope": "CLASS",
+            "isSelected": true,
+            "onClickCallback": "this.handleSoundOptionSelected.bind(this);",
+            "value": "on",
+            "x": 450,
+            "y": 120,
+            "originX": 0,
+            "originY": 0.5,
+            "text": "On"
+        },
+        {
+            "prefabId": "eea93eec-efbc-4970-be48-96e0532814a9",
+            "id": "8bb158a1-7f65-40fe-8461-eff1c5c3d932",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "originX",
+                "originY",
+                "onClickCallback",
+                "value"
+            ],
+            "label": "soundOffText",
+            "displayName": "Sound Off Text",
+            "scope": "CLASS",
+            "onClickCallback": "this.handleSoundOptionSelected.bind(this);",
+            "value": "off",
+            "x": 550,
+            "y": 120,
+            "originX": 0,
+            "originY": 0.5,
+            "text": "Off"
+        },
+        {
+            "prefabId": "d0f8dfed-f644-4e96-a9cb-6a1fa428b564",
+            "id": "38a3a92a-65f6-4d8e-bfd7-49a150641d6d",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "color",
+                "sceneToTransitionsTo"
+            ],
+            "label": "backText",
+            "displayName": "Back To Menu Text",
+            "sceneToTransitionsTo": "Title",
+            "x": 512,
+            "y": 420,
+            "text": "Back",
+            "color": "#fff"
+        },
+        {
+            "prefabId": "9b4b760b-43aa-4ddb-9b75-eb1a0d4b9442",
+            "id": "78daf19a-54cc-45b8-ab6e-27dbdca6a961",
+            "unlock": [
+                "x",
+                "y",
+                "currentValue",
+                "maxValue",
+                "minValue",
+                "onValueChangeCallback"
+            ],
+            "label": "sliderPrefab",
+            "currentValue": 1,
+            "onValueChangeCallback": "this.handleVolumeSliderChange.bind(this);",
+            "x": 575,
+            "y": 201
+        },
+        {
+            "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+            "id": "ad9a5bc1-bd03-450d-8e81-d6c21688b5b6",
+            "label": "onAwakeScript",
+            "list": [
+                {
+                    "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
+                    "id": "5b321a85-30ec-4512-9d8b-a15fcd791d1c",
+                    "unlock": [
+                        "fadeDirection",
+                        "color"
+                    ],
+                    "label": "fadeCameraActionScript_1",
+                    "fadeDirection": "FadeIn",
+                    "color": "#000000",
+                    "components": [
+                        "DurationConfigComp"
+                    ],
+                    "DurationConfigComp.duration": 500
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "id": "7ee88470-f945-4814-ac87-a7ba2314a942",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "prefabId": "eea93eec-efbc-4970-be48-96e0532814a9",
+            "id": "c32a5fe6-9671-4096-9282-80ee2af9e89c",
+            "unlock": [
+                "x",
+                "y",
+                "color",
+                "stroke",
+                "text",
+                "fontSize"
+            ],
+            "label": "slashAttackTextPrefab",
+            "displayName": "Slash Attack Text",
+            "x": 0,
+            "y": 0,
+            "text": "Slash Attack",
+            "fontSize": "32px",
+            "color": "#000000",
+            "stroke": "#000000"
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

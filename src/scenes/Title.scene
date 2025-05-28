@@ -1,0 +1,152 @@
+{
+    "id": "859511eb-8503-45a7-a803-c6ad305f7d45",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Title",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "fc459002-6654-49e1-ad05-bcbb337c345e",
+            "label": "background",
+            "displayName": "Background",
+            "texture": {
+                "key": "background"
+            },
+            "scaleX": 0.58,
+            "scaleY": 0.58,
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "Image",
+            "id": "e315bbb1-baf1-49d3-9768-584de643c9a9",
+            "label": "title_background",
+            "displayName": "Title Background",
+            "texture": {
+                "key": "title_background"
+            },
+            "x": 512,
+            "y": 150,
+            "scaleX": 0.25,
+            "scaleY": 0.25,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
+        },
+        {
+            "type": "Image",
+            "id": "ee512fe2-fcbb-4bff-a00c-2e23d7bc834a",
+            "label": "title_text",
+            "displayName": "Title Text",
+            "texture": {
+                "key": "title_text"
+            },
+            "x": 512,
+            "y": 150,
+            "scaleX": 0.55,
+            "scaleY": 0.55,
+            "alpha": 0.5,
+            "alphaTopLeft": 0.5,
+            "alphaTopRight": 0.5,
+            "alphaBottomLeft": 0.5,
+            "alphaBottomRight": 0.5
+        },
+        {
+            "type": "NineSlice",
+            "id": "3d5adab0-b33c-4eb5-a4fe-af6904aa983b",
+            "label": "menuBackground",
+            "displayName": "Menu Background",
+            "texture": {
+                "key": "glass_panel"
+            },
+            "x": 512,
+            "y": 434,
+            "leftWidth": 32,
+            "rightWidth": 32,
+            "topHeight": 32,
+            "bottomHeight": 32,
+            "width": 500,
+            "height": 200
+        },
+        {
+            "prefabId": "d0f8dfed-f644-4e96-a9cb-6a1fa428b564",
+            "id": "8e21efb9-b914-4131-a318-361fcc43ec6a",
+            "unlock": [
+                "x",
+                "y",
+                "sceneToTransitionsTo"
+            ],
+            "label": "newGameTextPrefab",
+            "displayName": "New Game Text Prefab",
+            "sceneToTransitionsTo": "Battle",
+            "x": 512,
+            "y": 400
+        },
+        {
+            "prefabId": "d0f8dfed-f644-4e96-a9cb-6a1fa428b564",
+            "id": "71c7b858-4758-4e47-8cea-09a43782ea9a",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "sceneToTransitionsTo"
+            ],
+            "label": "optionsTextPrefab",
+            "displayName": "Options Text Prefab",
+            "sceneToTransitionsTo": "Settings",
+            "x": 512,
+            "y": 450,
+            "text": "Options"
+        },
+        {
+            "prefabId": "4fec7711-a833-4e26-ae49-782a633dd6ea",
+            "id": "4a986f8b-d11b-4db1-af3b-5374f3724ff4",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "music_on",
+            "x": 986,
+            "y": 37
+        },
+        {
+            "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+            "id": "fda1bef1-0645-4473-a606-bac7242c6740",
+            "label": "onAwakeScript",
+            "list": [
+                {
+                    "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
+                    "id": "2ba6cca2-7b2f-44af-b1dd-dfe4114e4530",
+                    "unlock": [
+                        "fadeDirection",
+                        "color"
+                    ],
+                    "label": "fadeCameraActionScript_1",
+                    "fadeDirection": "FadeIn",
+                    "color": "#000000",
+                    "components": [
+                        "DurationConfigComp"
+                    ],
+                    "DurationConfigComp.duration": 500
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

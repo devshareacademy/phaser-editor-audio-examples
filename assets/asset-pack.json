@@ -1,0 +1,97 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/animations.json",
+                "type": "animation",
+                "key": "animations"
+            },
+            {
+                "url": "assets/images/background.png",
+                "type": "image",
+                "key": "background"
+            },
+            {
+                "url": "assets/images/carnodusk.png",
+                "type": "image",
+                "key": "carnodusk"
+            },
+            {
+                "url": "assets/images/forest-background.png",
+                "type": "image",
+                "key": "forest-background"
+            },
+            {
+                "url": "assets/images/glass_panel.png",
+                "type": "image",
+                "key": "glass_panel"
+            },
+            {
+                "url": "assets/images/ice-attack.png",
+                "frameConfig": {
+                    "frameWidth": 32,
+                    "frameHeight": 32,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "ice-attack"
+            },
+            {
+                "url": "assets/images/iguanignite.png",
+                "type": "image",
+                "key": "iguanignite"
+            },
+            {
+                "url": "assets/fonts/Kenney-Future-Narrow.ttf",
+                "format": "truetype",
+                "descriptors": {},
+                "type": "font",
+                "key": "Kenney-Future-Narrow"
+            },
+            {
+                "url": "assets/images/music_off.png",
+                "type": "image",
+                "key": "music_off"
+            },
+            {
+                "url": "assets/images/music_on.png",
+                "type": "image",
+                "key": "music_on"
+            },
+            {
+                "url": "assets/images/slash.png",
+                "frameConfig": {
+                    "frameWidth": 48,
+                    "frameHeight": 48,
+                    "startFrame": 0,
+                    "endFrame": -1,
+                    "spacing": 0,
+                    "margin": 0
+                },
+                "type": "spritesheet",
+                "key": "slash"
+            },
+            {
+                "url": "assets/images/title_background.png",
+                "type": "image",
+                "key": "title_background"
+            },
+            {
+                "url": "assets/images/title_text.png",
+                "type": "image",
+                "key": "title_text"
+            }
+        ]
+    },
+    "meta": {
+        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "contentType": "phasereditor2d.pack.core.AssetContentType",
+        "url": "https://phasereditor2d.com",
+        "version": 2,
+        "showAllFilesInBlocks": false,
+        "visible": true
+    }
+}

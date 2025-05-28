@@ -1,0 +1,178 @@
+{
+    "id": "bf5074ab-0fe3-42c9-b43d-283efd90c371",
+    "sceneType": "SCENE",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadPackFiles": [],
+        "createMethodName": "editorCreate",
+        "sceneKey": "Battle",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "Image",
+            "id": "98e9b129-d66c-4a62-b9cd-f337d72202f3",
+            "label": "forest_background",
+            "texture": {
+                "key": "forest-background"
+            },
+            "originX": 0,
+            "originY": 0
+        },
+        {
+            "type": "Image",
+            "id": "25af513c-8d1d-41f1-8ec6-0b5281e34b76",
+            "label": "carnodusk",
+            "texture": {
+                "key": "carnodusk"
+            },
+            "x": 816,
+            "y": 190,
+            "scaleX": 0.8,
+            "scaleY": 0.8
+        },
+        {
+            "type": "Image",
+            "id": "81edcd3a-eefc-44d2-a8d8-b5e87d6cd141",
+            "label": "iguanignite",
+            "texture": {
+                "key": "iguanignite"
+            },
+            "x": 198,
+            "y": 285,
+            "scaleX": 0.8,
+            "scaleY": 0.8,
+            "flipX": true
+        },
+        {
+            "type": "Sprite",
+            "id": "e81a0530-3cd6-4d03-894b-119c9f013711",
+            "label": "iceAttack",
+            "displayName": "Ice Attack",
+            "scope": "CLASS",
+            "texture": {
+                "key": "ice-attack",
+                "frame": 7
+            },
+            "x": 200,
+            "y": 310,
+            "scaleX": 3,
+            "scaleY": 3,
+            "animationKey": "ice"
+        },
+        {
+            "type": "Sprite",
+            "id": "295a8610-b3d6-4213-a6f3-96d3866a1fb7",
+            "label": "slashAttack",
+            "displayName": "Slash Attack",
+            "scope": "CLASS",
+            "texture": {
+                "key": "slash",
+                "frame": 2
+            },
+            "x": 778,
+            "y": 197,
+            "scaleX": 4,
+            "scaleY": 4,
+            "tintTopLeft": "#00ff00",
+            "tintTopRight": "#000",
+            "tintBottomLeft": "#000",
+            "tintBottomRight": "#000",
+            "tintFill": true,
+            "animationKey": "slash"
+        },
+        {
+            "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+            "id": "74237bfc-6199-4f05-89ac-1644db573b10",
+            "label": "onAwakeScript",
+            "list": [
+                {
+                    "prefabId": "8b05d14f-3d5d-42a7-adfb-a0b20d9196b5",
+                    "id": "2867da30-8668-4662-92fe-577b8ed2e77a",
+                    "unlock": [
+                        "fadeDirection",
+                        "color"
+                    ],
+                    "label": "fadeCameraActionScript_1",
+                    "fadeDirection": "FadeIn",
+                    "color": "#000000",
+                    "components": [
+                        "DurationConfigComp"
+                    ],
+                    "DurationConfigComp.duration": 500
+                }
+            ]
+        },
+        {
+            "prefabId": "7ee88470-f945-4814-ac87-a7ba2314a942",
+            "id": "e9a2c930-4670-454e-acab-51239b3919c9",
+            "unlock": [
+                "x",
+                "y",
+                "color",
+                "stroke",
+                "text",
+                "fontSize",
+                "value",
+                "onClickCallback"
+            ],
+            "label": "slashAttackTextPrefab",
+            "displayName": "Slash Attack Text",
+            "onClickCallback": "this.handleAttackSelected.bind(this);",
+            "value": "slash",
+            "x": 250,
+            "y": 510,
+            "text": "Slash Attack",
+            "fontSize": "40px",
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        {
+            "prefabId": "7ee88470-f945-4814-ac87-a7ba2314a942",
+            "id": "f61208e8-4255-46c9-a778-258fee0e8129",
+            "unlock": [
+                "x",
+                "y",
+                "color",
+                "stroke",
+                "text",
+                "fontSize",
+                "value",
+                "onClickCallback"
+            ],
+            "label": "iceAttackTextPrefab",
+            "displayName": "Ice Attack Text",
+            "onClickCallback": "this.handleAttackSelected.bind(this);",
+            "value": "ice",
+            "x": 835,
+            "y": 510,
+            "text": "Ice Attack",
+            "fontSize": "40px",
+            "color": "#000000",
+            "stroke": "#000000"
+        },
+        {
+            "prefabId": "4fec7711-a833-4e26-ae49-782a633dd6ea",
+            "id": "a4abd69c-06fb-46d8-85d9-8dc43e95d548",
+            "unlock": [
+                "x",
+                "y",
+                "tintFill"
+            ],
+            "label": "music_on",
+            "x": 986,
+            "y": 37,
+            "tintFill": false
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    }
+}

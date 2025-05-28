@@ -1,0 +1,162 @@
+{
+    "id": "eea93eec-efbc-4970-be48-96e0532814a9",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "prefabId": "520f31c8-5ee1-4e64-aaaf-88a21d0e985c",
+            "id": "d7c679f3-d908-48f2-97c9-d95a517fec38",
+            "unlock": [
+                "x",
+                "y",
+                "text",
+                "originX",
+                "originY"
+            ],
+            "label": "backText",
+            "displayName": "Back Text",
+            "x": 0,
+            "y": 0,
+            "originX": 0.5,
+            "originY": 0.5,
+            "text": "Back",
+            "list": [
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "d44ff59d-fe72-4117-af3e-1762035e98b0",
+                    "unlock": [
+                        "eventName"
+                    ],
+                    "label": "onPointerOverScript",
+                    "displayName": "On Point Over Script",
+                    "eventName": "Phaser.Input.Events.POINTER_OVER",
+                    "list": [
+                        {
+                            "prefabId": "abc52dda-ca85-4e23-ad3c-48081272a0d3",
+                            "id": "3f350862-a024-4437-b7a2-c30e9ff40f01",
+                            "unlock": [
+                                "scaleX"
+                            ],
+                            "label": "setScaleXActionScript",
+                            "displayName": "Increase Scale X",
+                            "scaleX": 1.25
+                        },
+                        {
+                            "prefabId": "80e97917-0335-47e1-aa0e-024f8dfde149",
+                            "id": "039d2801-d06c-4ce9-9a84-0eb69ef1bd77",
+                            "unlock": [
+                                "scaleY"
+                            ],
+                            "label": "setScaleYActionScript",
+                            "displayName": "Increase Scale Y",
+                            "scaleY": 1.25
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "4f85a3b1-8f9c-48ee-97b6-951bc0475c6e",
+                    "unlock": [
+                        "eventName"
+                    ],
+                    "label": "onPointerOutScript",
+                    "displayName": "On Pointer Out Script",
+                    "eventName": "Phaser.Input.Events.POINTER_OUT",
+                    "list": [
+                        {
+                            "prefabId": "80e97917-0335-47e1-aa0e-024f8dfde149",
+                            "id": "be0f75d2-b7bb-44f4-9d44-ab950cb4e1eb",
+                            "unlock": [
+                                "scaleY"
+                            ],
+                            "label": "setScaleYActionScript_1",
+                            "displayName": "Reset Scale Y",
+                            "scaleY": 1
+                        },
+                        {
+                            "prefabId": "abc52dda-ca85-4e23-ad3c-48081272a0d3",
+                            "id": "c449de42-73bc-439a-90ca-94f523eeda77",
+                            "unlock": [
+                                "scaleX"
+                            ],
+                            "label": "setScaleXActionScript_1",
+                            "displayName": "Reset Scale X",
+                            "scaleX": 1
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "153af0b5-ce6c-4e87-ad76-3ccc918697a7",
+                    "unlock": [
+                        "once"
+                    ],
+                    "label": "onPointerDownScript",
+                    "displayName": "On Click Handler Script",
+                    "once": false,
+                    "list": [
+                        {
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "2fe20f60-e973-46e8-a86d-6714f872ea50",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "callbackActionScript",
+                            "scope": "CLASS",
+                            "callback": "() => { this.onClickHandler(); }"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "isSelected",
+            "label": "Is Selected",
+            "tooltip": "If this option is selected",
+            "defValue": false,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
+        },
+        {
+            "name": "onClickCallback",
+            "label": "On Click Callback",
+            "tooltip": "The callback function to invoke when button is clicked.",
+            "defValue": "(value) => { return; }",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "(value: string) => void;"
+            }
+        },
+        {
+            "name": "value",
+            "label": "Value",
+            "tooltip": "The value of this option.",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "string"
+            }
+        }
+    ]
+}

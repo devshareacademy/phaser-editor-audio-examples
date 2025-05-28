@@ -1,0 +1,76 @@
+{
+    "id": "9b4b760b-43aa-4ddb-9b75-eb1a0d4b9442",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "importFileExtension": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1024,
+        "borderHeight": 576
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "bdc9d8df-b64b-4323-83de-d5f5d3d3d306",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Rectangle",
+                    "id": "c1e1a8a8-2b29-45f0-8b25-6e7ac2b6b3e5",
+                    "label": "sliderBody",
+                    "displayName": "Slider Body",
+                    "scope": "CLASS",
+                    "isFilled": true,
+                    "fillColor": "0x888888",
+                    "strokeColor": "0x888888",
+                    "width": 250,
+                    "height": 10
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "b42a55f7-76e7-491b-ae0b-7809a9695ee1",
+                    "label": "knob",
+                    "displayName": "Knob",
+                    "scope": "CLASS",
+                    "x": 125,
+                    "isFilled": true,
+                    "width": 15,
+                    "height": 15
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor - Scene Editor",
+        "url": "https://phaser.io/editor",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 5
+    },
+    "prefabProperties": [
+        {
+            "name": "currentValue",
+            "label": "Current Value",
+            "tooltip": "The current value of the slider (a value between 0 and 1).",
+            "defValue": 1,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "onValueChangeCallback",
+            "label": "On Value Change Callback",
+            "tooltip": "The callback function to invoke when the slider value changes.",
+            "defValue": "(value) => { return; }",
+            "customDefinition": false,
+            "type": {
+                "id": "expression",
+                "expressionType": "(value: number;) => void;"
+            }
+        }
+    ]
+}
